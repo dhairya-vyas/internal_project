@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Interface</title>
+    <style>
+        .led-on {
+            background-color: green;
+        }
+
+        .led-off {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>LED Control</h1>
+    <button id="ledButton" type="button" onclick="toggleLED()" class="led-off">LED: OFF</button>
+
+    <h2>Temperature Viewer</h2>
+    <h3>Battery Voltage Viewer</h3>
+
+    <script>
+        function toggleLED() {
+            var button = document.getElementById("ledButton");
+            if (button.innerHTML === "LED: OFF") {
+                button.innerHTML = "LED: ON";
+                button.className = "led-on";
+            } else {
+                button.innerHTML = "LED: OFF";
+                button.className = "led-off";
+            }
+        }
+    </script>
+</body>
+</html>
